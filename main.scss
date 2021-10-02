@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+// variable
+
+// color
+$color-primary-light: #171126;
+$color-primary-dark: #171127;
+$color-secondary: #ff9000;
+$color-white: #fff;
+
+// wigth
+$container: 1520px;
+
+//size
+$font-primary: 16px;
+// header style
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+.header {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../assets/images/home-bg.webp);
+
+  &__top {
+    height: 300px;
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.94),
+      rgba($color-primary-dark, 0.94)
+    );
+    text-align: center;
+    border-bottom: 3px solid $color-secondary;
+    position: relative;
+    padding-top: 40px;
+
+    &--navbar {
+      width: $container;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      &-social,
+      &-main {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        & > li {
+        }
+
+        & a {
+          color: $color-white;
+          font-size: $font-primary;
+          text-decoration: none;
+          text-transform: uppercase;
+          transition: 0.4s;
+
+          &:hover {
+            color: $color-secondary;
+          }
+        }
+      }
+
+      &-social {
+        gap: 20px;
+      }
+    }
+  }
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  &.btn-search {
+    color: $color-white;
+    font-size: 24px;
+    transition: 0.4s;
+
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+}
